@@ -10,4 +10,6 @@
 
 @interface comFirstViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *loginBtn;
+
 @end
