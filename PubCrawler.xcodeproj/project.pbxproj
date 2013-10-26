@@ -24,6 +24,7 @@
 		7D30B05D181C33FB003DD3C4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D30B05C181C33FB003DD3C4 /* LoginViewController.m */; };
 		7D30B0AA181C4984003DD3C4 /* PubListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D30B0A9181C4984003DD3C4 /* PubListController.m */; };
 		7D30B0AD181C4C42003DD3C4 /* PubTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D30B0AC181C4C42003DD3C4 /* PubTableCell.m */; };
+		7D30B0B0181C4EE2003DD3C4 /* PubListDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D30B0AF181C4EE2003DD3C4 /* PubListDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,8 @@
 		7D30B0A9181C4984003DD3C4 /* PubListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PubListController.m; sourceTree = "<group>"; };
 		7D30B0AB181C4C42003DD3C4 /* PubTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PubTableCell.h; sourceTree = "<group>"; };
 		7D30B0AC181C4C42003DD3C4 /* PubTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PubTableCell.m; sourceTree = "<group>"; };
+		7D30B0AE181C4EE2003DD3C4 /* PubListDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PubListDataSource.h; sourceTree = "<group>"; };
+		7D30B0AF181C4EE2003DD3C4 /* PubListDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PubListDataSource.m; sourceTree = "<group>"; };
 		85A441F4FCEA47CE933B9969 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -135,6 +138,8 @@
 				7D1A93A5181BF7E3001A2EE4 /* Supporting Files */,
 				7D30B05B181C33FB003DD3C4 /* LoginViewController.h */,
 				7D30B05C181C33FB003DD3C4 /* LoginViewController.m */,
+				7D30B0AE181C4EE2003DD3C4 /* PubListDataSource.h */,
+				7D30B0AF181C4EE2003DD3C4 /* PubListDataSource.m */,
 			);
 			path = PubCrawler;
 			sourceTree = "<group>";
@@ -303,6 +308,7 @@
 			files = (
 				7D1A93AF181BF7E3001A2EE4 /* comAppDelegate.m in Sources */,
 				7D30B0AA181C4984003DD3C4 /* PubListController.m in Sources */,
+				7D30B0B0181C4EE2003DD3C4 /* PubListDataSource.m in Sources */,
 				7D30B0AD181C4C42003DD3C4 /* PubTableCell.m in Sources */,
 				7D1A93AB181BF7E3001A2EE4 /* main.m in Sources */,
 				7D30B05D181C33FB003DD3C4 /* LoginViewController.m in Sources */,

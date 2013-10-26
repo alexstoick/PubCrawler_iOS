@@ -8,6 +8,7 @@
 
 #import "AFNetworking.h"
 #import "LoginViewController.h"
+#import "PubListDataSource.h"
 
 @interface LoginViewController ()
 
@@ -39,22 +40,17 @@
 - (IBAction)buttonPressed:(id)sender {
     
     //NSLog(@"%@ , %@", _username.text , _password.text );
-    
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager GET:@"http://pubcrawl.uclr.org/services/pub" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-//        NSLog(@"JSON: %@", responseObject);
-        
-        NSMutableArray *jsonArray = [NSMutableArray arrayWithArray:responseObject];
-        
-        NSLog( @"%@" , jsonArray[1] ) ;
-        NSLog( @"%@" , [jsonArray[1] valueForKey:@"pub_id"] ) ;
-        
-        
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error: %@", error);
-    }];
-    
+    [[PubListDataSource getInstance] parsePubListWithCompletion:^(BOOL success) {
+        if ( success)
+        {
+            [self performSegueWithIdentifier:@"changeToPubList" sender:self] ;
+        }
+        else
+        {
+            NSLog ( @"uat" ) ;
+        }
+    }] ;
+
     NSLog ( @"uat" ) ;
 }
 
