@@ -26,6 +26,8 @@
 		7D30B0AD181C4C42003DD3C4 /* PubTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D30B0AC181C4C42003DD3C4 /* PubTableCell.m */; };
 		7D30B0B0181C4EE2003DD3C4 /* PubListDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D30B0AF181C4EE2003DD3C4 /* PubListDataSource.m */; };
 		7D30B0B3181C5594003DD3C4 /* Pub.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D30B0B2181C5594003DD3C4 /* Pub.m */; };
+		7D30B0B5181C5CE4003DD3C4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D30B0B4181C5CE4003DD3C4 /* MapKit.framework */; };
+		7D30B0B8181C5D4E003DD3C4 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D30B0B7181C5D4E003DD3C4 /* MapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,9 @@
 		7D30B0AF181C4EE2003DD3C4 /* PubListDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PubListDataSource.m; sourceTree = "<group>"; };
 		7D30B0B1181C5594003DD3C4 /* Pub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pub.h; sourceTree = "<group>"; };
 		7D30B0B2181C5594003DD3C4 /* Pub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pub.m; sourceTree = "<group>"; };
+		7D30B0B4181C5CE4003DD3C4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7D30B0B6181C5D4D003DD3C4 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		7D30B0B7181C5D4E003DD3C4 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		85A441F4FCEA47CE933B9969 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -75,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D30B0B5181C5CE4003DD3C4 /* MapKit.framework in Frameworks */,
 				7D1A93A1181BF7E3001A2EE4 /* CoreGraphics.framework in Frameworks */,
 				7D1A93A3181BF7E3001A2EE4 /* UIKit.framework in Frameworks */,
 				7D1A939F181BF7E3001A2EE4 /* Foundation.framework in Frameworks */,
@@ -118,6 +124,7 @@
 		7D1A939D181BF7E3001A2EE4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7D30B0B4181C5CE4003DD3C4 /* MapKit.framework */,
 				7D1A939E181BF7E3001A2EE4 /* Foundation.framework */,
 				7D1A93A0181BF7E3001A2EE4 /* CoreGraphics.framework */,
 				7D1A93A2181BF7E3001A2EE4 /* UIKit.framework */,
@@ -130,6 +137,8 @@
 		7D1A93A4181BF7E3001A2EE4 /* PubCrawler */ = {
 			isa = PBXGroup;
 			children = (
+				7D30B0B6181C5D4D003DD3C4 /* MapViewController.h */,
+				7D30B0B7181C5D4E003DD3C4 /* MapViewController.m */,
 				7D30B0A8181C4984003DD3C4 /* PubListController.h */,
 				7D30B0A9181C4984003DD3C4 /* PubListController.m */,
 				7D1A93AD181BF7E3001A2EE4 /* comAppDelegate.h */,
@@ -314,6 +323,7 @@
 				7D1A93AF181BF7E3001A2EE4 /* comAppDelegate.m in Sources */,
 				7D30B0B3181C5594003DD3C4 /* Pub.m in Sources */,
 				7D30B0AA181C4984003DD3C4 /* PubListController.m in Sources */,
+				7D30B0B8181C5D4E003DD3C4 /* MapViewController.m in Sources */,
 				7D30B0B0181C4EE2003DD3C4 /* PubListDataSource.m in Sources */,
 				7D30B0AD181C4C42003DD3C4 /* PubTableCell.m in Sources */,
 				7D1A93AB181BF7E3001A2EE4 /* main.m in Sources */,

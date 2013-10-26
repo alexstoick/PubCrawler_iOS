@@ -7,6 +7,9 @@
 //
 
 #import "PubListController.h"
+#import "PubListDataSource.h"
+#import "PubTableCell.h"
+#import "Pub.h"
 
 @interface PubListController ()
 
@@ -48,24 +51,23 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [[PubListDataSource getInstance].pubList count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"pubListTableCell";
+    PubTableCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
+    Pub * currentPub = [PubListDataSource getInstance].pubList[indexPath.row] ;
+    
+    cell.titleLabel.text = currentPub.name ;
     
     return cell;
 }

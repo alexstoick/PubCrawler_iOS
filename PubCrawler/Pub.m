@@ -10,8 +10,4 @@
 
 @implementation Pub
 
-@property (nonatomic,strong) (NSString *) name ;
-@property (nonatomic,strong) (NSString *) latitude ;
-@property (nonatomic,strong) (NSString *) longitude ;
-
 @end

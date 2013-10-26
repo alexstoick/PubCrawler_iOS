@@ -8,6 +8,7 @@
 
 #import "PubListDataSource.h"
 #import "AFNetworking.h"
+#import "Pub.h"
 
 static PubListDataSource * _pubListDataSource ;
 
@@ -39,12 +40,22 @@ static PubListDataSource * _pubListDataSource ;
 {
     
     [self.manager GET:@"http://pubcrawl.uclr.org/services/pub" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        //        NSLog(@"JSON: %@", responseObject);
         
         NSMutableArray *jsonArray = [NSMutableArray arrayWithArray:responseObject];
         
-        NSLog( @"%@" , jsonArray[1] ) ;
-        NSLog( @"%@" , [jsonArray[1] valueForKey:@"pub_id"] ) ;
+        NSMutableArray *pubArray = [[NSMutableArray alloc] init] ;
+        
+        for ( NSDictionary * pub in jsonArray )
+        {
+            
+            Pub * pubFromJson = [[Pub alloc]init] ;
+            pubFromJson.name = [pub valueForKey:@"pub_name"] ;
+            pubFromJson.latitude = [pub valueForKey:@"pub_location_latitude"] ;
+            pubFromJson.longitude = [pub valueForKey:@"pub_location_longitude"] ;
+            [pubArray addObject:pubFromJson];
+        }
+        
+        self.pubList = pubArray ;
         
         completionBlock(YES);
         
