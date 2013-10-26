@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface comFirstViewController : UIViewController
+@interface LoginViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIButton *loginBtn;
+@property (weak, nonatomic) IBOutlet UITextField *username;
+@property (weak, nonatomic) IBOutlet UITextField *password;
 
 @end

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>89DF64C7-27EC-498F-BFAD-AB46A3D5E0CA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PubCrawler</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>678502BB-5156-4FC5-8AF4-9017132044DE</key>
+		<string>ssh://github.com/alexstoick/PubCrawler.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PubCrawler.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>678502BB-5156-4FC5-8AF4-9017132044DE</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/alexstoick/PubCrawler.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>678502BB-5156-4FC5-8AF4-9017132044DE</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>678502BB-5156-4FC5-8AF4-9017132044DE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PubCrawler</string>
+		</dict>
+	</array>
+</dict>
+</plist>
