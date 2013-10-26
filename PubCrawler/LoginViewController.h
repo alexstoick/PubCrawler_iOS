@@ -1,5 +1,5 @@
 //
-//  comFirstViewController.h
+//  LoginViewController.h
 //  PubCrawler
 //
 //  Created by Stoica Alexandru on 10/26/13.
@@ -12,5 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *username;
 @property (weak, nonatomic) IBOutlet UITextField *password;
+@property (weak, nonatomic) IBOutlet UIButton *loginBtn;
 
 @end

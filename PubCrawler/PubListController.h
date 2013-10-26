@@ -1,5 +1,5 @@
 //
-//  comSecondViewController.h
+//  PubListController.h
 //  PubCrawler
 //
 //  Created by Stoica Alexandru on 10/26/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TableViewController : UIViewController
+@interface PubListController : UITableViewController
 
 @end

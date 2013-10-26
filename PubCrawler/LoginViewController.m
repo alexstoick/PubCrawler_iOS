@@ -1,5 +1,5 @@
 //
-//  comFirstViewController.m
+//  LoginViewController.m
 //  PubCrawler
 //
 //  Created by Stoica Alexandru on 10/26/13.
@@ -15,11 +15,19 @@
 
 @implementation LoginViewController
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    NSLog(@"uat") ;
+	// Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
@@ -30,25 +38,24 @@
 
 - (IBAction)buttonPressed:(id)sender {
     
-    NSLog(@"%@ , %@", _username.text , _password.text );
+    //NSLog(@"%@ , %@", _username.text , _password.text );
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager GET:@"http://37.139.26.80/newssource/" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-            
-            NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData: [responseObject dataUsingEncoding:NSUTF8StringEncoding]
-                                                                           options: NSJSONReadingMutableContainers
-                                                                             error: nil];
+    [manager GET:@"http://pubcrawl.uclr.org/services/pub" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//        NSLog(@"JSON: %@", responseObject);
         
-            NSDictionary * categories = [jsonDictionary valueForKey:@"categories"];
-                                             
-            NSLog ( @"Categories: @%" , categories ) ;
-            NSLog ( @"uat" ) ;
+        NSMutableArray *jsonArray = [NSMutableArray arrayWithArray:responseObject];
+        
+        NSLog( @"%@" , jsonArray[1] ) ;
+        NSLog( @"%@" , [jsonArray[1] valueForKey:@"pub_id"] ) ;
+        
+        
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
     }];
+    
+    NSLog ( @"uat" ) ;
 }
-
-
 
 @end
