@@ -8,6 +8,7 @@
 
 #import "MapViewController.h"
 #import "PubListDataSource.h"
+#import "Pub.h"
 
 @interface MapViewController ()
 
@@ -47,6 +48,58 @@
     [[PubListDataSource getInstance] parsePubListWithCompletion:^(BOOL success) {
         if ( success)
         {
+            NSArray * pubList = [PubListDataSource getInstance].pubList ;
+            for ( Pub * pub in pubList )
+            {
+                MKPointAnnotation *annot = [[MKPointAnnotation alloc] init];
+                
+                CLLocationCoordinate2D coordinate ;
+                coordinate.latitude = [pub.latitude doubleValue] ;
+                coordinate.longitude = [pub.longitude doubleValue] ;
+                
+                annot.coordinate = coordinate;
+                [self.mapView addAnnotation:annot];
+            }
+            
+            MKDirectionsRequest *request = [[MKDirectionsRequest alloc] init];
+            
+            [request setSource: [MKMapItem mapItemForCurrentLocation]];
+            
+//            CLLocationCoordinate2D coordinate ;
+//            Pub *pub = pubList[0];
+//            coordinate.latitude = [pub.latitude doubleValue] ;
+//            coordinate.longitude = [pub.longitude doubleValue] ;
+//            
+//            MKPlacemark *mapPlacemark = [[MKPlacemark alloc] initWithCoordinate:coordinate addressDictionary: nil] ;
+//            MKMapItem *mapItem_source= [[MKMapItem alloc] initWithPlacemark: mapPlacemark] ;
+//            
+//            [request setSource:mapItem_source ] ;
+            
+            CLLocationCoordinate2D coordinate ;
+            Pub * pub = pubList[1];
+            coordinate.latitude = [pub.latitude doubleValue] ;
+            coordinate.longitude = [pub.longitude doubleValue] ;
+            
+            MKPlacemark * mapPlacemark = [[MKPlacemark alloc] initWithCoordinate:coordinate addressDictionary: nil] ;
+            MKMapItem *mapItem_destination = [[MKMapItem alloc] initWithPlacemark: mapPlacemark] ;
+            
+            [request setDestination:mapItem_destination ];
+            
+            request.requestsAlternateRoutes = YES;
+            MKDirections *directions =
+            [[MKDirections alloc] initWithRequest:request];
+            
+            [directions calculateDirectionsWithCompletionHandler:
+             ^(MKDirectionsResponse *response, NSError *error) {
+                 if (error) {
+                     // Handle Error
+                     NSLog ( @"%@" , error ) ;
+                 } else {
+                     NSLog ( @"uat" ) ; 
+                     [self showRoute:response];
+                 }
+             }];
+            
             
         }
         else
@@ -55,6 +108,29 @@
         }
     }] ;
     
+}
+
+-(void)showRoute:(MKDirectionsResponse *)response
+{
+    MKRoute *route =  response.routes[0] ;
+
+    for (MKRouteStep *step in route.steps)
+    {
+        NSLog(@"%@", step.instructions);
+    }
+    
+    [ self.mapView
+     addOverlay:route.polyline level:MKOverlayLevelAboveRoads];
+
+}
+
+- (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id < MKOverlay >)overlay
+{
+    MKPolylineRenderer *renderer =
+    [[MKPolylineRenderer alloc] initWithOverlay:overlay];
+    renderer.strokeColor = [UIColor blueColor];
+    renderer.lineWidth = 5.0;
+    return renderer;
 }
 
 @end
