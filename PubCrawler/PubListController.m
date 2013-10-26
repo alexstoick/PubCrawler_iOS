@@ -26,6 +26,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.hidesBottomBarWhenPushed = true ;
+    [self.navigationItem setHidesBackButton:YES animated:YES];
+    [self.navigationController setNavigationBarHidden:NO animated:false];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

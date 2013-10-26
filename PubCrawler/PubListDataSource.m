@@ -30,7 +30,7 @@ static PubListDataSource * _pubListDataSource ;
 -(AFHTTPRequestOperationManager *) manager {
     if ( ! _manager  )
     {
-        _manager = [[AFHTTPRequestOperationManager alloc] init];
+        _manager = [AFHTTPRequestOperationManager manager];
     }
     return _manager ;
 }
