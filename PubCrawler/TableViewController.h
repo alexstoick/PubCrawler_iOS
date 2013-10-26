@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface comSecondViewController : UIViewController
+@interface TableViewController : UIViewController
 
 @end

@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 Stoica Alexandru. All rights reserved.
 //
 
-#import "comSecondViewController.h"
+#import "TableViewController.h"
 
-@interface comSecondViewController ()
+@interface TableViewController ()
 
 @end
 
-@implementation comSecondViewController
+@implementation TableViewController
 
 - (void)viewDidLoad
 {
