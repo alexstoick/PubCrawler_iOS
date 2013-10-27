@@ -32,6 +32,10 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     [self.navigationController setNavigationBarHidden:YES animated:false];
+    if ( [[NSUserDefaults standardUserDefaults] valueForKey:@"isLoggedIn" ] )
+    {
+        [ self performSegueWithIdentifier:@"loginToMainView" sender:self] ;
+    }
 
 }
 
@@ -84,6 +88,7 @@
                 NSLog( @"Login result: %@" , success ) ;
                 if ( [success isEqualToNumber: @1] )
                 {
+                    [[NSUserDefaults standardUserDefaults] setValue:@1 forKey:@"isLoggedIn" ] ;
                     [self performSegueWithIdentifier:@"loginToMainView" sender:self] ;
                 }
                 else

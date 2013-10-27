@@ -79,7 +79,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "65"
             endingLineNumber = "65"
-            landmarkName = "-mapView:didUpdateUserLocation:"
+            landmarkName = "-createRouteFromGeneratedPubList"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -95,8 +95,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "66"
             endingLineNumber = "66"
-            landmarkName = "@implementation MapViewController"
-            landmarkType = "3">
+            landmarkName = "-createRouteFromGeneratedPubList"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
