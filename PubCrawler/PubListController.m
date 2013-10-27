@@ -32,16 +32,6 @@
     
     [self.navigationController setNavigationBarHidden:NO animated:false];
     [self.navigationItem setHidesBackButton:YES animated:YES];
-    self.hidesBottomBarWhenPushed = true ;
-
-//    
-//    
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -76,10 +66,6 @@
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [self performSegueWithIdentifier:@"pubListToPubDetail" sender:self ] ;
-}
 
 /*
 // Override to support conditional editing of the table view.

@@ -5,61 +5,59 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
     </dependencies>
     <scenes>
-        <!--TableView Controller-->
-        <scene sceneID="u0y-Fp-Afc">
+        <!--Pub List Controller-->
+        <scene sceneID="fua-Lv-Tcc">
             <objects>
-                <tableViewController id="U0J-qc-SfG" userLabel="TableView Controller" customClass="PubListController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="center" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="RCs-Qy-kho">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                <tableViewController id="C7f-si-Qht" customClass="PubListController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="AmY-1R-WKI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="pubListTableCell" id="pwe-fq-Agk" customClass="PubTableCell">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="pubListTableCell" id="QQ4-Yh-DQF" customClass="PubTableCell">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pwe-fq-Agk" id="bQT-H3-e7v">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QQ4-Yh-DQF" id="9om-uY-dY7">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bty-Lx-g0d">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67m-4b-3jc">
                                             <rect key="frame" x="73" y="11" width="214" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo3" translatesAutoresizingMaskIntoConstraints="NO" id="Gl0-vl-Ox3">
-                                            <rect key="frame" x="8" y="5" width="50" height="38"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo3" translatesAutoresizingMaskIntoConstraints="NO" id="hA9-zC-FIl">
+                                            <rect key="frame" x="15" y="3" width="50" height="38"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <inset key="separatorInset" minX="73" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
-                                    <outlet property="imageBar" destination="Gl0-vl-Ox3" id="Ref-m4-B3i"/>
-                                    <outlet property="titleLabel" destination="bty-Lx-g0d" id="BcY-hR-gWe"/>
+                                    <outlet property="imageBar" destination="hA9-zC-FIl" id="SbR-Qh-fCq"/>
+                                    <outlet property="titleLabel" destination="67m-4b-3jc" id="T3E-kF-Ny7"/>
+                                    <segue destination="f3u-Og-Flw" kind="push" identifier="pubListToPubDetail" id="iaF-Oz-gUW"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="U0J-qc-SfG" id="71U-mt-c0F"/>
-                            <outlet property="delegate" destination="U0J-qc-SfG" id="ScE-HH-3lu"/>
+                            <outlet property="dataSource" destination="C7f-si-Qht" id="gSA-Jx-dz2"/>
+                            <outlet property="delegate" destination="C7f-si-Qht" id="qet-dU-HDG"/>
                         </connections>
                     </tableView>
-                    <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="List of pubs" id="ACl-7E-xv3"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-                    <connections>
-                        <segue destination="f3u-Og-Flw" kind="push" identifier="pubListToPubDetail" id="7e0-3g-tIi"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="cPP-8H-yVT"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZxQ-WY-A4h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tRG-TM-Uha" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1292" y="-2029"/>
+            <point key="canvasLocation" x="1203" y="-1936"/>
         </scene>
-        <!--View Controller-->
+        <!--Pub Detail Controller - Hello World-->
         <scene sceneID="33k-xT-nZR">
             <objects>
-                <viewController id="f3u-Og-Flw" sceneMemberID="viewController">
+                <viewController id="f3u-Og-Flw" customClass="PubDetailController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mtG-0b-wKT"/>
                         <viewControllerLayoutGuide type="bottom" id="rVJ-vQ-QLl"/>
@@ -67,13 +65,23 @@
                     <view key="view" contentMode="scaleToFill" id="yse-2W-U3Z">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9JU-WF-XXB">
+                                <rect key="frame" x="69" y="419" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="7mM-Gi-hF9"/>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" title="Hello World" id="7mM-Gi-hF9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7EQ-T7-p3Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1992" y="-2029"/>
+            <point key="canvasLocation" x="1700" y="-2029"/>
         </scene>
         <!--MainView Controller-->
         <scene sceneID="Q4y-JV-Ykz">
@@ -150,7 +158,6 @@
                                 </state>
                                 <connections>
                                     <action selector="seePubList:" destination="4Ar-RI-h7d" eventType="touchUpInside" id="TL3-Yl-SC2"/>
-                                    <segue destination="U0J-qc-SfG" kind="push" identifier="mainToPubList" id="1Lh-C7-j4F"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -161,6 +168,7 @@
                         <outlet property="moneySlider" destination="OV9-Ta-Zhc" id="l8e-mG-Ghg"/>
                         <outlet property="pubsSlider" destination="88O-u5-Cjy" id="xSz-4f-3ss"/>
                         <segue destination="hNY-Fk-Vnp" kind="push" identifier="mainToMap" id="qSw-64-zjU"/>
+                        <segue destination="C7f-si-Qht" kind="push" identifier="mainToPubList" id="kN4-Gv-duO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zYB-8l-Dzn" userLabel="First Responder" sceneMemberID="firstResponder"/>
