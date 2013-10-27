@@ -18,6 +18,7 @@ static BOOL _setupMap = NO ;
 @interface MapViewController ()
 
 @property (strong,nonatomic) NSArray * generatedPubList ;
+@property (strong,nonatomic) NSMutableArray * generatedAnnotationList ;
 
 @end
 
@@ -80,7 +81,9 @@ static BOOL _setupMap = NO ;
         coordinate.longitude = [pub.longitude doubleValue] ;
      
         annot.coordinate = coordinate;
-        [self.mapView addAnnotation:annot];
+        annot.title = pub.name ;
+        [self.mapView addAnnotation:annot] ;
+        [self.generatedAnnotationList addObject:annot] ;
         
         MKPlacemark * mapPlacemark = [[MKPlacemark alloc] initWithCoordinate:coordinate addressDictionary: nil] ;
         MKMapItem *mapItem_destination = [[MKMapItem alloc] initWithPlacemark: mapPlacemark] ;
@@ -158,6 +161,23 @@ static BOOL _setupMap = NO ;
     cell.titleLabel.text = currentPub.name ;
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    Pub * currentPub = self.generatedPubList[indexPath.row] ;
+    
+    CLLocationCoordinate2D centre_point ;
+    
+    centre_point.latitude = [currentPub.latitude doubleValue];
+    centre_point.longitude = [currentPub.longitude doubleValue];
+    
+    MKCoordinateRegion mapRegion;
+    mapRegion.center = centre_point ;
+    mapRegion.span.latitudeDelta = 0.001;
+    mapRegion.span.longitudeDelta = 0.001;
+    [self.mapView selectAnnotation:self.generatedAnnotationList[indexPath.row] animated:NO] ;
+    [self.mapView setRegion:mapRegion animated: YES];
 }
 
 
