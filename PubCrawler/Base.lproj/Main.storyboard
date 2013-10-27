@@ -52,10 +52,10 @@
             </objects>
             <point key="canvasLocation" x="1388" y="-657"/>
         </scene>
-        <!--MainView-->
+        <!--MainView Controller-->
         <scene sceneID="Q4y-JV-Ykz">
             <objects>
-                <viewController id="4Ar-RI-h7d" userLabel="MainView" sceneMemberID="viewController">
+                <viewController id="4Ar-RI-h7d" userLabel="MainView Controller" customClass="MainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ATb-6N-yd8"/>
                         <viewControllerLayoutGuide type="bottom" id="gSz-YV-XHj"/>
@@ -108,6 +108,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="S5E-Fu-3p5"/>
                     <connections>
+                        <outlet property="moneySlider" destination="OV9-Ta-Zhc" id="l8e-mG-Ghg"/>
+                        <outlet property="pubsSlider" destination="88O-u5-Cjy" id="xSz-4f-3ss"/>
                         <segue destination="hNY-Fk-Vnp" kind="push" identifier="mainToMap" id="qSw-64-zjU"/>
                     </connections>
                 </viewController>

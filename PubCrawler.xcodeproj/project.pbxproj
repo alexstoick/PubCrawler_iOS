@@ -29,6 +29,7 @@
 		7D30B0B5181C5CE4003DD3C4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D30B0B4181C5CE4003DD3C4 /* MapKit.framework */; };
 		7D30B0B8181C5D4E003DD3C4 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D30B0B7181C5D4E003DD3C4 /* MapViewController.m */; };
 		7D30B0C1181C919F003DD3C4 /* BasicSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D30B0C0181C919F003DD3C4 /* BasicSlider.m */; };
+		7D30B0C4181C989C003DD3C4 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D30B0C3181C989B003DD3C4 /* MainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,8 @@
 		7D30B0B7181C5D4E003DD3C4 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		7D30B0BF181C919F003DD3C4 /* BasicSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicSlider.h; sourceTree = "<group>"; };
 		7D30B0C0181C919F003DD3C4 /* BasicSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicSlider.m; sourceTree = "<group>"; };
+		7D30B0C2181C989B003DD3C4 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
+		7D30B0C3181C989B003DD3C4 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		85A441F4FCEA47CE933B9969 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -140,23 +143,20 @@
 		7D1A93A4181BF7E3001A2EE4 /* PubCrawler */ = {
 			isa = PBXGroup;
 			children = (
+				7D30B0C5181C98A2003DD3C4 /* Pub Stuff */,
 				7D30B0B6181C5D4D003DD3C4 /* MapViewController.h */,
 				7D30B0B7181C5D4E003DD3C4 /* MapViewController.m */,
-				7D30B0A8181C4984003DD3C4 /* PubListController.h */,
-				7D30B0A9181C4984003DD3C4 /* PubListController.m */,
 				7D1A93AD181BF7E3001A2EE4 /* comAppDelegate.h */,
 				7D1A93AE181BF7E3001A2EE4 /* comAppDelegate.m */,
 				7D1A93B0181BF7E3001A2EE4 /* Main.storyboard */,
+				7D30B0C2181C989B003DD3C4 /* MainViewController.h */,
+				7D30B0C3181C989B003DD3C4 /* MainViewController.m */,
 				7D30B0BF181C919F003DD3C4 /* BasicSlider.h */,
 				7D30B0C0181C919F003DD3C4 /* BasicSlider.m */,
-				7D30B0AB181C4C42003DD3C4 /* PubTableCell.h */,
-				7D30B0AC181C4C42003DD3C4 /* PubTableCell.m */,
 				7D1A93B9181BF7E3001A2EE4 /* Images.xcassets */,
 				7D1A93A5181BF7E3001A2EE4 /* Supporting Files */,
 				7D30B05B181C33FB003DD3C4 /* LoginViewController.h */,
 				7D30B05C181C33FB003DD3C4 /* LoginViewController.m */,
-				7D30B0AE181C4EE2003DD3C4 /* PubListDataSource.h */,
-				7D30B0AF181C4EE2003DD3C4 /* PubListDataSource.m */,
 				7D30B0B1181C5594003DD3C4 /* Pub.h */,
 				7D30B0B2181C5594003DD3C4 /* Pub.m */,
 			);
@@ -190,6 +190,19 @@
 				7D1A93C9181BF7E3001A2EE4 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7D30B0C5181C98A2003DD3C4 /* Pub Stuff */ = {
+			isa = PBXGroup;
+			children = (
+				7D30B0AB181C4C42003DD3C4 /* PubTableCell.h */,
+				7D30B0AC181C4C42003DD3C4 /* PubTableCell.m */,
+				7D30B0A8181C4984003DD3C4 /* PubListController.h */,
+				7D30B0A9181C4984003DD3C4 /* PubListController.m */,
+				7D30B0AE181C4EE2003DD3C4 /* PubListDataSource.h */,
+				7D30B0AF181C4EE2003DD3C4 /* PubListDataSource.m */,
+			);
+			name = "Pub Stuff";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,6 +341,7 @@
 				7D1A93AF181BF7E3001A2EE4 /* comAppDelegate.m in Sources */,
 				7D30B0B3181C5594003DD3C4 /* Pub.m in Sources */,
 				7D30B0AA181C4984003DD3C4 /* PubListController.m in Sources */,
+				7D30B0C4181C989C003DD3C4 /* MainViewController.m in Sources */,
 				7D30B0B8181C5D4E003DD3C4 /* MapViewController.m in Sources */,
 				7D30B0B0181C4EE2003DD3C4 /* PubListDataSource.m in Sources */,
 				7D30B0C1181C919F003DD3C4 /* BasicSlider.m in Sources */,
