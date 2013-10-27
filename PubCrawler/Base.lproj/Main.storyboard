@@ -309,7 +309,7 @@
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" id="JfU-Kz-PgK"/>
+                    <navigationItem key="navigationItem" title="PubCrawl" id="JfU-Kz-PgK"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="mapView" destination="vfm-7Y-bkn" id="TzE-XX-L0v"/>

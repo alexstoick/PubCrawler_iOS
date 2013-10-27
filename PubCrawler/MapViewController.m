@@ -65,6 +65,7 @@ static BOOL _setupMap = NO ;
 -(void)createRouteFromGeneratedPubList {
     
     MKDirectionsRequest *request = [[MKDirectionsRequest alloc] init];
+    request.transportType = MKDirectionsTransportTypeWalking ;
     [request setSource: [MKMapItem mapItemForCurrentLocation]];
    
     GeneratedPubsList * pubListInstance = [GeneratedPubsList getInstance ] ;
