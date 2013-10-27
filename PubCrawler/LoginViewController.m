@@ -50,8 +50,6 @@
 
 - (IBAction)buttonPressed:(id)sender {
     
-    NSLog(@"%@ , %@", _username.text , _password.text );
-    
     //validate the username & password
     
     if ( [_username.text length] == 0 )

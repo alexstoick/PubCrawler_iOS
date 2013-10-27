@@ -48,7 +48,7 @@
 
 -(IBAction)buttonPressed:(id)sender {
     
-    [self.manager GET:@"http://pubcrawl.uclr.org/map/generate/"
+    [self.manager GET:@"http://pubcrawl.uclr.org/map/generate/" parameters:nil
                success:^(AFHTTPRequestOperation *operation, id responseObject) {
                    
                        [self performSegueWithIdentifier:@"mainToMap" sender:self] ;

@@ -38,7 +38,6 @@
 
     // Convert "steps" back to the context of the sliders values.
 
-    NSLog( @"%f" , sender.value ) ;
     sender.value = roundf ( sender.value ) ;
     
     _textField.text = [NSString stringWithFormat:@"%.0f" , sender.value ] ;
