@@ -172,7 +172,7 @@ static BOOL _setupMap = NO ;
     mapRegion.center = centre_point ;
     mapRegion.span.latitudeDelta = 0.001;
     mapRegion.span.longitudeDelta = 0.001;
-    [self.mapView selectAnnotation:self.mapView.annotations[indexPath.row] animated:NO] ;
+    [self.mapView selectAnnotation:[self.mapView.annotations objectAtIndex:indexPath.row] animated:NO] ;
     [self.mapView setRegion:mapRegion animated: YES];
 }
 
