@@ -81,7 +81,7 @@
                 
                 NSNumber * success = [responseObject valueForKey:@"success"] ;
                 NSLog( @"Login result: %@" , success ) ;
-                if ( success == @1 )
+                if ( [success isEqualToNumber: @1] )
                 {
                     [self performSegueWithIdentifier:@"loginToMainView" sender:self] ;
                 }
