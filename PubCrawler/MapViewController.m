@@ -12,13 +12,11 @@
 #import "GeneratedPubsList.h"
 #import "PubTableCell.h"
 
-static MapViewController * _mapViewController ;
 static BOOL _setupMap = NO ;
 
 @interface MapViewController ()
 
 @property (strong,nonatomic) NSArray * generatedPubList ;
-@property (strong,nonatomic) NSMutableArray * generatedAnnotationList ;
 
 @end
 
@@ -83,8 +81,6 @@ static BOOL _setupMap = NO ;
         annot.coordinate = coordinate;
         annot.title = pub.name ;
         [self.mapView addAnnotation:annot] ;
-        [self.generatedAnnotationList addObject:annot] ;
-        
         MKPlacemark * mapPlacemark = [[MKPlacemark alloc] initWithCoordinate:coordinate addressDictionary: nil] ;
         MKMapItem *mapItem_destination = [[MKMapItem alloc] initWithPlacemark: mapPlacemark] ;
         
@@ -176,7 +172,7 @@ static BOOL _setupMap = NO ;
     mapRegion.center = centre_point ;
     mapRegion.span.latitudeDelta = 0.001;
     mapRegion.span.longitudeDelta = 0.001;
-    [self.mapView selectAnnotation:self.generatedAnnotationList[indexPath.row] animated:NO] ;
+    [self.mapView selectAnnotation:self.mapView.annotations[indexPath.row] animated:NO] ;
     [self.mapView setRegion:mapRegion animated: YES];
 }
 
