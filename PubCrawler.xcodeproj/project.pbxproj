@@ -30,6 +30,7 @@
 		7D30B0B8181C5D4E003DD3C4 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D30B0B7181C5D4E003DD3C4 /* MapViewController.m */; };
 		7D30B0C1181C919F003DD3C4 /* BasicSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D30B0C0181C919F003DD3C4 /* BasicSlider.m */; };
 		7D30B0C4181C989C003DD3C4 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D30B0C3181C989B003DD3C4 /* MainViewController.m */; };
+		7DFD44C1181CA907005DA743 /* GeneratedPubsList.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFD44C0181CA907005DA743 /* GeneratedPubsList.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,8 @@
 		7D30B0C0181C919F003DD3C4 /* BasicSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicSlider.m; sourceTree = "<group>"; };
 		7D30B0C2181C989B003DD3C4 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		7D30B0C3181C989B003DD3C4 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		7DFD44BF181CA907005DA743 /* GeneratedPubsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneratedPubsList.h; sourceTree = "<group>"; };
+		7DFD44C0181CA907005DA743 /* GeneratedPubsList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratedPubsList.m; sourceTree = "<group>"; };
 		85A441F4FCEA47CE933B9969 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -201,6 +204,8 @@
 				7D30B0A9181C4984003DD3C4 /* PubListController.m */,
 				7D30B0AE181C4EE2003DD3C4 /* PubListDataSource.h */,
 				7D30B0AF181C4EE2003DD3C4 /* PubListDataSource.m */,
+				7DFD44BF181CA907005DA743 /* GeneratedPubsList.h */,
+				7DFD44C0181CA907005DA743 /* GeneratedPubsList.m */,
 			);
 			name = "Pub Stuff";
 			sourceTree = "<group>";
@@ -255,6 +260,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Stoica Alexandru";
 				TargetAttributes = {
+					7D1A939A181BF7E2001A2EE4 = {
+						DevelopmentTeam = MQ8JA8H9EG;
+					};
 					7D1A93BE181BF7E3001A2EE4 = {
 						TestTargetID = 7D1A939A181BF7E2001A2EE4;
 					};
@@ -340,6 +348,7 @@
 			files = (
 				7D1A93AF181BF7E3001A2EE4 /* comAppDelegate.m in Sources */,
 				7D30B0B3181C5594003DD3C4 /* Pub.m in Sources */,
+				7DFD44C1181CA907005DA743 /* GeneratedPubsList.m in Sources */,
 				7D30B0AA181C4984003DD3C4 /* PubListController.m in Sources */,
 				7D30B0C4181C989C003DD3C4 /* MainViewController.m in Sources */,
 				7D30B0B8181C5D4E003DD3C4 /* MapViewController.m in Sources */,
@@ -475,11 +484,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PubCrawler/PubCrawler-Prefix.pch";
 				INFOPLIST_FILE = "PubCrawler/PubCrawler-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -490,11 +503,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PubCrawler/PubCrawler-Prefix.pch";
 				INFOPLIST_FILE = "PubCrawler/PubCrawler-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
