@@ -57,7 +57,7 @@ static PubListDataSource * _pubListDataSource ;
         
         self.pubList = pubArray ;
         
-        completionBlock(YES);
+        completionBlock(YES);        
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);

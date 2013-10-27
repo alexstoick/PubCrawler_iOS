@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PubCrawler/MapViewController.m"
-            timestampString = "404539403.451339"
+            timestampString = "404555293.682511"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "-createRouteFromGeneratedPubList"
             landmarkType = "5">
          </BreakpointContent>
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PubCrawler/MapViewController.m"
-            timestampString = "404539403.451339"
+            timestampString = "404555293.682511"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "-createRouteFromGeneratedPubList"
             landmarkType = "5">
          </BreakpointContent>

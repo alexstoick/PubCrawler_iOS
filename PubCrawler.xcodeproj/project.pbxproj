@@ -30,6 +30,7 @@
 		7D30B0C1181C919F003DD3C4 /* BasicSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D30B0C0181C919F003DD3C4 /* BasicSlider.m */; };
 		7D30B0C4181C989C003DD3C4 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D30B0C3181C989B003DD3C4 /* MainViewController.m */; };
 		7D762A19181CB76A008D2A32 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D762A18181CB76A008D2A32 /* Images.xcassets */; };
+		7D762A1C181D097E008D2A32 /* PubDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D762A1B181D097E008D2A32 /* PubDetailController.m */; };
 		7DFD44C1181CA907005DA743 /* GeneratedPubsList.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFD44C0181CA907005DA743 /* GeneratedPubsList.m */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +80,8 @@
 		7D30B0C2181C989B003DD3C4 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		7D30B0C3181C989B003DD3C4 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		7D762A18181CB76A008D2A32 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7D762A1A181D097E008D2A32 /* PubDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PubDetailController.h; sourceTree = "<group>"; };
+		7D762A1B181D097E008D2A32 /* PubDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PubDetailController.m; sourceTree = "<group>"; };
 		7DFD44BF181CA907005DA743 /* GeneratedPubsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneratedPubsList.h; sourceTree = "<group>"; };
 		7DFD44C0181CA907005DA743 /* GeneratedPubsList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratedPubsList.m; sourceTree = "<group>"; };
 		85A441F4FCEA47CE933B9969 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,9 +152,13 @@
 				7D30B0C5181C98A2003DD3C4 /* Pub Stuff */,
 				7D30B0B6181C5D4D003DD3C4 /* MapViewController.h */,
 				7D30B0B7181C5D4E003DD3C4 /* MapViewController.m */,
+				7D30B0A8181C4984003DD3C4 /* PubListController.h */,
+				7D30B0A9181C4984003DD3C4 /* PubListController.m */,
 				7D1A93AD181BF7E3001A2EE4 /* comAppDelegate.h */,
 				7D1A93AE181BF7E3001A2EE4 /* comAppDelegate.m */,
 				7D1A93B0181BF7E3001A2EE4 /* Main.storyboard */,
+				7D762A1A181D097E008D2A32 /* PubDetailController.h */,
+				7D762A1B181D097E008D2A32 /* PubDetailController.m */,
 				7D30B0C2181C989B003DD3C4 /* MainViewController.h */,
 				7D30B0C3181C989B003DD3C4 /* MainViewController.m */,
 				7D762A18181CB76A008D2A32 /* Images.xcassets */,
@@ -200,8 +207,6 @@
 			children = (
 				7D30B0AB181C4C42003DD3C4 /* PubTableCell.h */,
 				7D30B0AC181C4C42003DD3C4 /* PubTableCell.m */,
-				7D30B0A8181C4984003DD3C4 /* PubListController.h */,
-				7D30B0A9181C4984003DD3C4 /* PubListController.m */,
 				7D30B0AE181C4EE2003DD3C4 /* PubListDataSource.h */,
 				7D30B0AF181C4EE2003DD3C4 /* PubListDataSource.m */,
 				7DFD44BF181CA907005DA743 /* GeneratedPubsList.h */,
@@ -352,6 +357,7 @@
 				7D30B0AA181C4984003DD3C4 /* PubListController.m in Sources */,
 				7D30B0C4181C989C003DD3C4 /* MainViewController.m in Sources */,
 				7D30B0B8181C5D4E003DD3C4 /* MapViewController.m in Sources */,
+				7D762A1C181D097E008D2A32 /* PubDetailController.m in Sources */,
 				7D30B0B0181C4EE2003DD3C4 /* PubListDataSource.m in Sources */,
 				7D30B0C1181C919F003DD3C4 /* BasicSlider.m in Sources */,
 				7D30B0AD181C4C42003DD3C4 /* PubTableCell.m in Sources */,

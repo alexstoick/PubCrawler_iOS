@@ -70,24 +70,35 @@
                                                    otherButtonTitles:nil];
         [errorAlert show];
     }
+    else {
     
-    NSMutableDictionary * params = [[NSMutableDictionary alloc] init];
-    [params setValue:_username.text forKey:@"username"] ;
-    [params setValue:_password.text forKey:@"password"] ;
-    
-    [self.manager POST:@"http://pubcrawl.uclr.org/services/authenticate/" parameters:params
-        success:^(AFHTTPRequestOperation *operation, id responseObject) {
-            
-            NSNumber * success = [responseObject valueForKey:@"success"] ;
-            NSLog( @"%@" , success ) ;
-            if ( success )
-            {
-                [self performSegueWithIdentifier:@"loginToMainView" sender:self] ;
-            }
-            
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog ( @"%@" , error ) ;
-    }] ;
+        NSMutableDictionary * params = [[NSMutableDictionary alloc] init];
+        [params setValue:_username.text forKey:@"username"] ;
+        [params setValue:_password.text forKey:@"password"] ;
+        
+        [self.manager POST:@"http://pubcrawl.uclr.org/services/authenticate/" parameters:params
+            success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                
+                NSNumber * success = [responseObject valueForKey:@"success"] ;
+                NSLog( @"Login result: %@" , success ) ;
+                if ( success == @1 )
+                {
+                    [self performSegueWithIdentifier:@"loginToMainView" sender:self] ;
+                }
+                else
+                {
+                    UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"Login failed !"
+                                                                         message:@"Password and/or user not correct ! "
+                                                                        delegate:nil
+                                                               cancelButtonTitle:@"OK"
+                                                               otherButtonTitles:nil];
+                    [errorAlert show];
+                }
+                
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            NSLog ( @"%@" , error ) ;
+        }] ;
+    }
 
 }
 

@@ -30,11 +30,12 @@
 {
     [super viewDidLoad];
     
-    self.hidesBottomBarWhenPushed = true ;
-    [self.navigationItem setHidesBackButton:YES animated:YES];
     [self.navigationController setNavigationBarHidden:NO animated:false];
-    
-    
+    [self.navigationItem setHidesBackButton:YES animated:YES];
+    self.hidesBottomBarWhenPushed = true ;
+
+//    
+//    
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -59,7 +60,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    NSLog ( @"%d" , [[PubListDataSource getInstance].pubList count] ) ;
+    NSLog ( @"COUNT : %d" , [[PubListDataSource getInstance].pubList count] ) ;
     return [[PubListDataSource getInstance].pubList count];
 }
 
@@ -73,6 +74,11 @@
     cell.titleLabel.text = currentPub.name ;
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"pubListToPubDetail" sender:self ] ;
 }
 
 /*

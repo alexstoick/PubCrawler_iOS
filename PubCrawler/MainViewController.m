@@ -41,6 +41,16 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    GeneratedPubsList * pubList = [GeneratedPubsList getInstance ] ;
+    [pubList parseGeneratedPubListWithCompletion:^(BOOL success) {
+        NSLog ( @"got the generate publist.") ;
+    }];
+    
+    PubListDataSource * pubListDataSource = [PubListDataSource getInstance ] ;
+    [pubListDataSource parsePubListWithCompletion:^(BOOL success) {
+        NSLog ( @"got the list of pubs" ) ;
+    }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,22 +61,14 @@
 
 -(IBAction)generateCrawlButtonPressed:(id)sender {
     
-    GeneratedPubsList * pubList = [GeneratedPubsList getInstance ] ;
-    [pubList parseGeneratedPubListWithCompletion:^(BOOL success) {
-        
-        [self performSegueWithIdentifier:@"mainToMap" sender:self] ;
-        
-    }];
+    [self performSegueWithIdentifier:@"mainToMap" sender:self] ;
+
 }
 
 -(IBAction)seePubList:(id)sender {
     
-    PubListDataSource * pubListDataSource = [PubListDataSource getInstance ] ;
-    [pubListDataSource parsePubListWithCompletion:^(BOOL success) {
-        
-        [self performSegueWithIdentifier:@"mainToPubList" sender:self] ;
-        
-    }];
+    [self performSegueWithIdentifier:@"mainToPubList" sender:self] ;
+
 }
 
 
