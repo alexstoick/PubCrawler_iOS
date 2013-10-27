@@ -79,7 +79,6 @@ static Boolean * _setupMap = false ;
         coordinate.latitude = [pub.latitude doubleValue] ;
         coordinate.longitude = [pub.longitude doubleValue] ;
      
-        NSLog( @"%@ %@" , pub.longitude , pub.latitude ) ;
         annot.coordinate = coordinate;
         [self.mapView addAnnotation:annot];
         
@@ -96,12 +95,13 @@ static Boolean * _setupMap = false ;
          ^(MKDirectionsResponse *response, NSError *error) {
              if (error) {
                  // Handle Error
-                 NSLog ( @"jhgjhghb %@" , error ) ;
+                 NSLog ( @"Error calculating directions: %@" , error ) ;
              } else {
-                 NSLog ( @"uat" ) ;
                  [self showRoute:response];
              }
          }];
+        
+        [request setSource: mapItem_destination];
     }
 }
 

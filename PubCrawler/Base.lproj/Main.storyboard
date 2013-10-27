@@ -50,7 +50,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZxQ-WY-A4h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1388" y="-657"/>
+            <point key="canvasLocation" x="1420" y="-2169"/>
         </scene>
         <!--MainView Controller-->
         <scene sceneID="Q4y-JV-Ykz">
@@ -103,7 +103,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonPressed:" destination="4Ar-RI-h7d" eventType="touchUpInside" id="rRv-kp-apd"/>
+                                    <action selector="generateCrawlButtonPressed:" destination="4Ar-RI-h7d" eventType="touchUpInside" id="quz-Fr-gTa"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="3" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="omF-lE-6qa">
@@ -118,6 +118,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSn-6v-dlf">
+                                <rect key="frame" x="75" y="363" width="158" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="22"/>
+                                <state key="normal" title="See pub list">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seePubList:" destination="4Ar-RI-h7d" eventType="touchUpInside" id="TL3-Yl-SC2"/>
+                                    <segue destination="U0J-qc-SfG" kind="push" identifier="mainToPubList" id="1Lh-C7-j4F"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -130,7 +142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zYB-8l-Dzn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="773" y="-1458"/>
+            <point key="canvasLocation" x="793" y="-1174"/>
         </scene>
         <!--LoginView-->
         <scene sceneID="WIC-0r-mrG">
@@ -201,7 +213,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DjQ-mU-SeR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="911" y="-645"/>
+            <point key="canvasLocation" x="255" y="-645"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="xOe-LM-H5p">
@@ -232,7 +244,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cqk-NK-Ilp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1404" y="-1434"/>
+            <point key="canvasLocation" x="1420" y="46"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rc3-Ly-L82">
@@ -250,7 +262,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5x1-Fy-s97" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="381" y="-657"/>
+            <point key="canvasLocation" x="-191" y="-645"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

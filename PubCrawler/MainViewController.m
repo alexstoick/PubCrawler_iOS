@@ -10,6 +10,7 @@
 #import "AFNetworking.h"
 #import "GeneratedPubsList.h"
 #import "MapViewController.h"
+#import "PubListDataSource.h"
 
 @interface MainViewController ()
 
@@ -48,7 +49,7 @@
     // Dispose of any resources that can be recreated.
 }
 
--(IBAction)buttonPressed:(id)sender {
+-(IBAction)generateCrawlButtonPressed:(id)sender {
     
     GeneratedPubsList * pubList = [GeneratedPubsList getInstance ] ;
     [pubList parseGeneratedPubListWithCompletion:^(BOOL success) {
@@ -58,6 +59,15 @@
     }];
 }
 
+-(IBAction)seePubList:(id)sender {
+    
+    PubListDataSource * pubListDataSource = [PubListDataSource getInstance ] ;
+    [pubListDataSource parsePubListWithCompletion:^(BOOL success) {
+        
+        [self performSegueWithIdentifier:@"mainToPubList" sender:self] ;
+        
+    }];
+}
 
 
 @end
