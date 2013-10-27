@@ -29,6 +29,11 @@ static Boolean * _setupMap = false ;
     return self;
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:false];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
