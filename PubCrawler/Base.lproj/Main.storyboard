@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
     </dependencies>
     <scenes>
-        <!--Pub List Controller-->
+        <!--Pub List Controller - Pub List-->
         <scene sceneID="fua-Lv-Tcc">
             <objects>
                 <tableViewController id="C7f-si-Qht" customClass="PubListController" sceneMemberID="viewController">
@@ -47,7 +47,7 @@
                             <outlet property="delegate" destination="C7f-si-Qht" id="qet-dU-HDG"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="cPP-8H-yVT"/>
+                    <navigationItem key="navigationItem" title="Pub List" id="cPP-8H-yVT"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tRG-TM-Uha" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -222,7 +222,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="y9A-tY-XvB"/>
+                    <navigationItem key="navigationItem" title="Pub Crawler" id="y9A-tY-XvB"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="loginBtn" destination="EDx-RS-6wx" id="qnx-c4-jqz"/>
@@ -233,7 +233,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DjQ-mU-SeR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="255" y="-645"/>
+            <point key="canvasLocation" x="283" y="-1606"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="xOe-LM-H5p">
@@ -282,7 +282,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5x1-Fy-s97" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-191" y="-645"/>
+            <point key="canvasLocation" x="-163" y="-1606"/>
         </scene>
     </scenes>
     <resources>

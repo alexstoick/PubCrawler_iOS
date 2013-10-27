@@ -14,8 +14,6 @@
 
 @interface MainViewController ()
 
-@property (strong,nonatomic) AFHTTPRequestOperationManager* manager ;
-
 @end
 
 @implementation MainViewController
@@ -29,20 +27,19 @@
     return self;
 }
 
--(AFHTTPRequestOperationManager *) manager {
-    if ( ! _manager  )
-    {
-        _manager = [AFHTTPRequestOperationManager manager];
-    }
-    return _manager ;
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+        [self.navigationItem setHidesBackButton:YES];
+    [self.navigationController setNavigationBarHidden:YES animated:false];
+
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
     GeneratedPubsList * pubList = [GeneratedPubsList getInstance ] ;
+    
     [pubList parseGeneratedPubListWithCompletion:^(BOOL success) {
         NSLog ( @"got the generate publist.") ;
     }];
