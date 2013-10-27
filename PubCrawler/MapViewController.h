@@ -11,7 +11,10 @@
 
 @interface MapViewController : UIViewController<MKMapViewDelegate>
 
++(MapViewController*)getInstance;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+-(void)createRouteFromPubList: (NSArray *)publist ;
+
 
 
 @end

@@ -8,6 +8,8 @@
 
 #import "MainViewController.h"
 #import "AFNetworking.h"
+#import "GeneratedPubsList.h"
+#import "MapViewController.h"
 
 @interface MainViewController ()
 
@@ -48,15 +50,12 @@
 
 -(IBAction)buttonPressed:(id)sender {
     
-    [self.manager GET:@"http://pubcrawl.uclr.org/map/generate/" parameters:nil
-               success:^(AFHTTPRequestOperation *operation, id responseObject) {
-                   
-                       [self performSegueWithIdentifier:@"mainToMap" sender:self] ;
-                   
-               } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                   NSLog ( @"%@" , error ) ;
-               }] ;
-    
+    GeneratedPubsList * pubList = [GeneratedPubsList getInstance ] ;
+    [pubList parseGeneratedPubListWithCompletion:^(BOOL success) {
+        
+        [self performSegueWithIdentifier:@"mainToMap" sender:self] ;
+        
+    }];
 }
 
 

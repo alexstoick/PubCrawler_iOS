@@ -45,12 +45,11 @@ static GeneratedPubsList * _generatedPubList ;
         
         NSMutableArray * pubArray = [[NSMutableArray alloc] init] ;
         
-        for ( NSDictionary * pub in jsonArray )
+        for ( NSArray * pub in jsonArray )
         {
             Pub * pubFromJson = [[Pub alloc]init] ;
-            pubFromJson.name = [pub valueForKey:@"pub_name"] ;
-            pubFromJson.latitude = [pub valueForKey:@"pub_location_latitude"] ;
-            pubFromJson.longitude = [pub valueForKey:@"pub_location_longitude"] ;
+            pubFromJson.latitude = pub[0] ;
+            pubFromJson.longitude = pub[1] ;
             [pubArray addObject:pubFromJson];
         }
         
