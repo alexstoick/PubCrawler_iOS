@@ -74,12 +74,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PubCrawler/MapViewController.m"
-            timestampString = "404555293.682511"
+            timestampString = "404559785.476551"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "-createRouteFromGeneratedPubList"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "-mapView:didUpdateUserLocation:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -90,12 +90,74 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PubCrawler/MapViewController.m"
-            timestampString = "404555293.682511"
+            timestampString = "404559785.476551"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "-createRouteFromGeneratedPubList"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "@implementation MapViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PubCrawler/GeneratedPubsList.m"
+            timestampString = "404560066.156117"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "-parseGeneratedPubListWithCompletion:"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__57-[GeneratedPubsList parseGeneratedPubListWithCompletion:]_block_invoke"
+                  moduleName = "PubCrawler"
+                  urlString = "file:///Users/alexstoick/Desktop/pubCrawl/PubCrawler/GeneratedPubsList.m"
+                  timestampString = "404560066.175777"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "996">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__57-[GeneratedPubsList parseGeneratedPubListWithCompletion:]_block_invoke"
+                  moduleName = "PubCrawler"
+                  urlString = "file:///Users/alexstoick/Desktop/pubCrawl/PubCrawler/GeneratedPubsList.m"
+                  timestampString = "404560066.178062"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "1143">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PubCrawler/GeneratedPubsList.m"
+            timestampString = "404560067.824402"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "-parseGeneratedPubListWithCompletion:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

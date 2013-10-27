@@ -10,11 +10,14 @@
 #import "PubListDataSource.h"
 #import "Pub.h"
 #import "GeneratedPubsList.h"
+#import "PubTableCell.h"
 
 static MapViewController * _mapViewController ;
-static Boolean * _setupMap = false ;
+static BOOL _setupMap = NO ;
 
 @interface MapViewController ()
+
+@property (strong,nonatomic) NSArray * generatedPubList ;
 
 @end
 
@@ -56,7 +59,7 @@ static Boolean * _setupMap = false ;
         mapRegion.span.longitudeDelta = 0.01;
         [mapView setRegion:mapRegion animated: YES];
         [self createRouteFromGeneratedPubList];
-        _setupMap = true ;
+        _setupMap = YES ;
     }
 }
 
@@ -66,9 +69,9 @@ static Boolean * _setupMap = false ;
     [request setSource: [MKMapItem mapItemForCurrentLocation]];
    
     GeneratedPubsList * pubListInstance = [GeneratedPubsList getInstance ] ;
-    NSArray * pubList = pubListInstance.generatedPubsList ;
-    
-    for ( Pub * pub in pubList )
+    self.generatedPubList = pubListInstance.generatedPubsList ;
+    [self.tableView reloadData ];
+    for ( Pub * pub in self.generatedPubList )
     {
         MKPointAnnotation *annot = [[MKPointAnnotation alloc] init];
         
@@ -130,5 +133,33 @@ static Boolean * _setupMap = false ;
     renderer.lineWidth = 5.0;
     return renderer;
 }
+
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    // Return the number of rows in the section.
+    return [self.generatedPubList count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"pubListTableCell";
+    PubTableCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    Pub * currentPub = self.generatedPubList[indexPath.row] ;
+    
+    cell.titleLabel.text = currentPub.name ;
+    
+    return cell;
+}
+
+
 
 @end

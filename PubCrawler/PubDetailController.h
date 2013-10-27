@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Pub.h"
 
 @interface PubDetailController : UIViewController
+
+@property (strong,nonatomic) Pub * currentPub ;
 
 @end

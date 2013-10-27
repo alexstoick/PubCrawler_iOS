@@ -9,12 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-@interface MapViewController : UIViewController<MKMapViewDelegate>
+@interface MapViewController : UIViewController<MKMapViewDelegate,UITableViewDataSource,UITableViewDelegate>
 
-+(MapViewController*)getInstance;
+
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
--(void)createRouteFromPubList: (NSArray *)publist ;
-
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "PubDetailController.h"
+#import "Pub.h"
 
 @interface PubDetailController ()
 
@@ -27,7 +28,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    NSLog ( @"woop" ) ; 
+    [self setTitle: self.currentPub.name] ;
 }
 
 - (void)didReceiveMemoryWarning
