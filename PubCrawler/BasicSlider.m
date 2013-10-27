@@ -8,6 +8,10 @@
 
 #import "BasicSlider.h"
 
+@interface BasicSlider ()
+
+@end
+
 @implementation BasicSlider
 
 - (id)initWithFrame:(CGRect)frame
@@ -19,20 +23,25 @@
     return self;
 }
 
+-(float)value {
+    return super.value ;
+}
+
 - (void)viewDidLoad {
 }
 
--(IBAction)valueChanged:(id)sender {
+-(IBAction)valueChanged:(BasicSlider *)sender {
     // This determines which "step" the slider should be on. Here we're taking
     //   the current position of the slider and dividing by the `self.stepValue`
     //   to determine approximately which step we are on. Then we round to get to
     //   find which step we are closest to.
 
     // Convert "steps" back to the context of the sliders values.
-     NSLog( @"%f" , _questionSlider.value ) ;
-    _questionSlider.value = roundf ( _questionSlider.value ) ;
+
+    NSLog( @"%f" , sender.value ) ;
+    sender.value = roundf ( sender.value ) ;
     
-    NSLog( @"%f" , _questionSlider.value ) ;
+    _textField.text = [NSString stringWithFormat:@"%.0f" , sender.value ] ;
 }
 
 /*

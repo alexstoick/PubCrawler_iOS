@@ -70,23 +70,23 @@
                                 <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="OV9-Ta-Zhc" customClass="BasicSlider">
+                            <slider opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="OV9-Ta-Zhc" customClass="BasicSlider">
                                 <rect key="frame" x="55" y="152" width="210" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="valueChanged:" destination="88O-u5-Cjy" eventType="valueChanged" id="ETD-Yx-192"/>
-                                    <outlet property="questionSlider" destination="88O-u5-Cjy" id="u8O-Eq-db5"/>
+                                    <action selector="valueChanged:" destination="88O-u5-Cjy" eventType="valueChanged" id="6rH-2w-vDr"/>
+                                    <outlet property="textField" destination="RBh-ey-BWq" id="q3O-rP-YfR"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="2" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="88O-u5-Cjy" customClass="BasicSlider">
+                            <slider opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="88O-u5-Cjy" customClass="BasicSlider">
                                 <rect key="frame" x="55" y="231" width="210" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="minimumTrackTintColor" red="0.83065031229999997" green="0.94032353940000002" blue="0.76448890790000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="maximumTrackTintColor" red="0.1994610634" green="0.32056725539999997" blue="0.2431712198" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="thumbTintColor" red="0.50769983870000002" green="0.57043987770000004" blue="0.37733082439999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <action selector="valueChanged:" destination="OV9-Ta-Zhc" eventType="valueChanged" id="LwF-jC-jUf"/>
-                                    <outlet property="questionSlider" destination="OV9-Ta-Zhc" id="gD7-Jk-5dF"/>
+                                    <action selector="valueChanged:" destination="OV9-Ta-Zhc" eventType="valueChanged" id="86W-6X-SxE"/>
+                                    <outlet property="textField" destination="omF-lE-6qa" id="jJY-Et-xkm"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number of pubs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0y-Zc-0Lo">
@@ -103,6 +103,18 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="omF-lE-6qa">
+                                <rect key="frame" x="20" y="155" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RBh-ey-BWq">
+                                <rect key="frame" x="20" y="233" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>

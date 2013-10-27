@@ -10,6 +10,6 @@
 
 @interface BasicSlider : UISlider
 
-@property (nonatomic, retain) IBOutlet UISlider * questionSlider;
+@property (nonatomic, retain) IBOutlet UITextField * textField;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BasicSlider.h"
 
 @interface MainViewController : UIViewController
 

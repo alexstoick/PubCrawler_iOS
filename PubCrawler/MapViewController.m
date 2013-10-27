@@ -65,16 +65,6 @@
             
             [request setSource: [MKMapItem mapItemForCurrentLocation]];
             
-//            CLLocationCoordinate2D coordinate ;
-//            Pub *pub = pubList[0];
-//            coordinate.latitude = [pub.latitude doubleValue] ;
-//            coordinate.longitude = [pub.longitude doubleValue] ;
-//            
-//            MKPlacemark *mapPlacemark = [[MKPlacemark alloc] initWithCoordinate:coordinate addressDictionary: nil] ;
-//            MKMapItem *mapItem_source= [[MKMapItem alloc] initWithPlacemark: mapPlacemark] ;
-//            
-//            [request setSource:mapItem_source ] ;
-            
             CLLocationCoordinate2D coordinate ;
             Pub * pub = pubList[1];
             coordinate.latitude = [pub.latitude doubleValue] ;
