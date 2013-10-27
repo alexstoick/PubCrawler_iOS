@@ -73,29 +73,23 @@
         [errorAlert show];
     }
     
-    NSDictionary * params = [[NSDictionary alloc] init];
-    
+    NSMutableDictionary * params = [[NSMutableDictionary alloc] init];
     [params setValue:_username.text forKey:@"username"] ;
     [params setValue:_password.text forKey:@"password"] ;
     
     [self.manager POST:@"http://pubcrawl.uclr.org/services/authenticate/" parameters:params
         success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog( @"%@" , responseObject ) ;
+            
+            NSNumber * success = [responseObject valueForKey:@"success"] ;
+            NSLog( @"%@" , success ) ;
+            if ( success )
+            {
+                [self performSegueWithIdentifier:@"loginToMainView" sender:self] ;
+            }
+            
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog ( @"%@" , error ) ;
     }] ;
-    
-//    [[PubListDataSource getInstance] parsePubListWithCompletion:^(BOOL success) {
-//        if ( success)
-//        {
-//            [self performSegueWithIdentifier:@"changeToPubList" sender:self] ;
-//        }
-//        else
-//        {
-//            NSLog ( @"uat" ) ;
-//        }
-//    }] ;
-
 
 }
 

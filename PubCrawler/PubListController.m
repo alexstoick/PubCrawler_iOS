@@ -33,6 +33,8 @@
     self.hidesBottomBarWhenPushed = true ;
     [self.navigationItem setHidesBackButton:YES animated:YES];
     [self.navigationController setNavigationBarHidden:NO animated:false];
+    
+    
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -57,6 +59,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
+    NSLog ( @"%d" , [[PubListDataSource getInstance].pubList count] ) ;
     return [[PubListDataSource getInstance].pubList count];
 }
 
